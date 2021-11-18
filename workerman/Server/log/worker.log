@@ -1,0 +1,89 @@
+2021-11-17 20:47:13 pid:1839 Workerman[start.php] start in DEBUG mode
+2021-11-17 20:47:34 pid:1839 Workerman[start.php] stopping ...
+2021-11-17 20:47:34 pid:1839 Workerman[start.php] has been stopped
+2021-11-17 21:11:51 pid:2103 Workerman[start.php] start in DEBUG mode
+2021-11-17 21:12:00 pid:2103 Workerman[start.php] stopping ...
+2021-11-17 21:12:01 pid:2103 Workerman[start.php] has been stopped
+2021-11-17 21:44:36 pid:2270 Workerman[start.php] start in DEBUG mode
+2021-11-17 21:44:41 pid:2273 Worker[2273] process terminated
+2021-11-17 21:44:42 pid:2270 Workerman[start.php] stopping ...
+2021-11-17 21:44:42 pid:2270 Workerman[start.php] has been stopped
+2021-11-17 21:45:14 pid:2277 Workerman[start.php] start in DEBUG mode
+2021-11-17 21:45:41 pid:2277 Workerman[start.php] stopping ...
+2021-11-17 21:45:41 pid:2277 Workerman[start.php] has been stopped
+2021-11-17 21:45:55 pid:2286 Workerman[start.php] start in DEBUG mode
+2021-11-17 21:46:08 pid:2286 Workerman[start.php] stopping ...
+2021-11-17 21:46:08 pid:2286 Workerman[start.php] has been stopped
+2021-11-17 21:56:08 pid:2335 Workerman[start.php] start in DEBUG mode
+2021-11-17 21:56:13 pid:2338 Error: Call to a member function get() on null in /var/www/html/workerman/Server/app/Pedidos/CPedidos.php:41
+Stack trace:
+#0 [internal function]: Server\app\Pedidos\CPedidos->Server\app\Pedidos\{closure}()
+#1 /var/www/html/workerman/vendor/workerman/http-client/src/Client.php(179): call_user_func()
+#2 [internal function]: Workerman\Http\Client->Workerman\Http\{closure}()
+#3 /var/www/html/workerman/vendor/workerman/http-client/src/Emitter.php(120): call_user_func_array()
+#4 [internal function]: Workerman\Http\Emitter->emit()
+#5 /var/www/html/workerman/vendor/workerman/http-client/src/Request.php(129): call_user_func_array()
+#6 /var/www/html/workerman/vendor/workerman/http-client/src/Request.php(448): Workerman\Http\Request->emit()
+#7 /var/www/html/workerman/vendor/workerman/workerman/Connection/TcpConnection.php(950): Workerman\Http\Request->emitSuccess()
+#8 /var/www/html/workerman/vendor/workerman/workerman/Connection/TcpConnection.php(596): Workerman\Connection\TcpConnection->destroy()
+#9 /var/www/html/workerman/vendor/workerman/workerman/Events/Select.php(292): Workerman\Connection\TcpConnection->baseRead()
+#10 /var/www/html/workerman/vendor/workerman/workerman/Worker.php(2408): Workerman\Events\Select->loop()
+#11 /var/www/html/workerman/vendor/workerman/workerman/Worker.php(1541): Workerman\Worker->run()
+#12 /var/www/html/workerman/vendor/workerman/workerman/Worker.php(1371): Workerman\Worker::forkOneWorkerForLinux()
+#13 /var/www/html/workerman/vendor/workerman/workerman/Worker.php(1345): Workerman\Worker::forkWorkersForLinux()
+#14 /var/www/html/workerman/vendor/workerman/workerman/Worker.php(546): Workerman\Worker::forkWorkers()
+#15 /var/www/html/workerman/Server/config/init_loader.php(16): Workerman\Worker::runAll()
+#16 /var/www/html/workerman/start.php(29): require_once('/var/www/html/w...')
+#17 {main}
+2021-11-17 21:56:13 pid:2338 Worker[2338] process terminated
+2021-11-17 21:56:13 pid:2335 worker[Timer:2338] exit with status 64000
+2021-11-17 21:56:15 pid:2335 Workerman[start.php] stopping ...
+2021-11-17 21:56:15 pid:2335 Workerman[start.php] has been stopped
+2021-11-17 21:56:52 pid:2343 Workerman[start.php] start in DEBUG mode
+2021-11-17 21:57:25 pid:2343 Workerman[start.php] stopping ...
+2021-11-17 21:57:25 pid:2343 Workerman[start.php] has been stopped
+2021-11-17 21:57:45 pid:2350 Workerman[start.php] start in DEBUG mode
+2021-11-17 21:57:50 pid:2350 Workerman[start.php] stopping ...
+2021-11-17 21:57:50 pid:2350 Workerman[start.php] has been stopped
+2021-11-17 21:58:31 pid:2358 Workerman[start.php] start in DEBUG mode
+2021-11-17 21:58:39 pid:2358 Workerman[start.php] stopping ...
+2021-11-17 21:58:39 pid:2358 Workerman[start.php] has been stopped
+2021-11-17 22:00:00 pid:2366 Workerman[start.php] start in DEBUG mode
+2021-11-17 22:00:08 pid:2366 Workerman[start.php] stopping ...
+2021-11-17 22:00:08 pid:2366 Workerman[start.php] has been stopped
+2021-11-17 22:04:40 pid:2527 Workerman[start.php] start in DEBUG mode
+2021-11-17 22:04:46 pid:2527 Workerman[start.php] stopping ...
+2021-11-17 22:04:46 pid:2527 Workerman[start.php] has been stopped
+2021-11-17 22:05:15 pid:2536 Workerman[start.php] start in DEBUG mode
+2021-11-17 22:05:25 pid:2539 ArgumentCountError: Too few arguments to function Server\Database\class_pdo::update(), 0 passed in /var/www/html/workerman/Server/app/Pedidos/CPedidos.php on line 53 and at least 1 expected in /var/www/html/workerman/Server/database/class_pdo.php:597
+Stack trace:
+#0 /var/www/html/workerman/Server/app/Pedidos/CPedidos.php(53): Server\Database\class_pdo->update()
+#1 [internal function]: Server\app\Pedidos\CPedidos->Server\app\Pedidos\{closure}()
+#2 /var/www/html/workerman/vendor/workerman/http-client/src/Client.php(179): call_user_func()
+#3 [internal function]: Workerman\Http\Client->Workerman\Http\{closure}()
+#4 /var/www/html/workerman/vendor/workerman/http-client/src/Emitter.php(120): call_user_func_array()
+#5 [internal function]: Workerman\Http\Emitter->emit()
+#6 /var/www/html/workerman/vendor/workerman/http-client/src/Request.php(129): call_user_func_array()
+#7 /var/www/html/workerman/vendor/workerman/http-client/src/Request.php(448): Workerman\Http\Request->emit()
+#8 /var/www/html/workerman/vendor/workerman/workerman/Connection/TcpConnection.php(950): Workerman\Http\Request->emitSuccess()
+#9 /var/www/html/workerman/vendor/workerman/workerman/Connection/TcpConnection.php(596): Workerman\Connection\TcpConnection->destroy()
+#10 /var/www/html/workerman/vendor/workerman/workerman/Events/Select.php(292): Workerman\Connection\TcpConnection->baseRead()
+#11 /var/www/html/workerman/vendor/workerman/workerman/Worker.php(2408): Workerman\Events\Select->loop()
+#12 /var/www/html/workerman/vendor/workerman/workerman/Worker.php(1541): Workerman\Worker->run()
+#13 /var/www/html/workerman/vendor/workerman/workerman/Worker.php(1371): Workerman\Worker::forkOneWorkerForLinux()
+#14 /var/www/html/workerman/vendor/workerman/workerman/Worker.php(1345): Workerman\Worker::forkWorkersForLinux()
+#15 /var/www/html/workerman/vendor/workerman/workerman/Worker.php(546): Workerman\Worker::forkWorkers()
+#16 /var/www/html/workerman/Server/config/init_loader.php(16): Workerman\Worker::runAll()
+#17 /var/www/html/workerman/start.php(29): require_once('/var/www/html/w...')
+#18 {main}
+2021-11-17 22:05:25 pid:2539 Worker[2539] process terminated
+2021-11-17 22:05:25 pid:2536 worker[Timer:2539] exit with status 64000
+2021-11-17 22:05:28 pid:2536 Workerman[start.php] stopping ...
+2021-11-17 22:05:28 pid:2536 Workerman[start.php] has been stopped
+2021-11-17 22:06:37 pid:2553 Workerman[start.php] start in DEBUG mode
+2021-11-17 22:07:05 pid:2553 Workerman[start.php] stopping ...
+2021-11-17 22:07:05 pid:2553 Workerman[start.php] has been stopped
+2021-11-17 22:17:37 pid:1 Workerman[start.php] start in DAEMON mode
+2021-11-18 02:53:00 pid:14523 Workerman[start.php] start in DEBUG mode
+2021-11-18 02:53:59 pid:14523 Workerman[start.php] stopping ...
+2021-11-18 02:53:59 pid:14523 Workerman[start.php] has been stopped

@@ -1,0 +1,8 @@
+{
+    "require": {
+        "workerman/workerman": "^3.5",
+        "phpmailer/phpmailer": "^6.1",
+        "workerman/mysql": "^1.0",
+        "workerman/http-client": "^0.1.7"
+    }
+}

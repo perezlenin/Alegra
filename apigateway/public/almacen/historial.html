@@ -1,0 +1,65 @@
+<div class="container-fluid px-4">
+    <h1 class="mt-4">Almacén</h1>
+    <ol class="breadcrumb mb-4">
+        <li class="breadcrumb-item active">Historial de Compras</li>
+    </ol>
+    <div class="row">
+        <div class="card mb-4">
+            <div class="card-header">
+                <i class="fas fa-table me-1"></i>
+            </div>
+            <div class="card-body">
+                <table id="tbl_data">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Ingrediente</th>
+                            <th>Cantidad Compra</th>
+                            <th>Fecha Compra</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbl_body">
+                        <tr>
+                            <td>Tiger Nixon</td>
+                            <td>System Architect</td>
+                            <td>Edinburgh</td>
+                        </tr>
+                        <tr>
+                            <td>Garrett Winters</td>
+                            <td>Accountant</td>
+                            <td>Tokyo</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+    </div>
+</div>
+<script>
+    $(function(){
+        // createTable();
+        
+        ajax(URI_HISTORIAL+"list", {}, function(response){
+            var html = "";
+            $.each(response,function(c,v){
+                html += "<tr>";
+                html += "<td>"+v.id+"</td>";
+                html += "<td>"+v.ingrediente+"</td>";
+                html += "<td>"+v.cantidad_compra+"</td>";
+                html += "<td>"+v.created_at+"</td>";
+                html += "</tr>";
+            });            
+            $("#tbl_body").html(html);
+            createTable();
+        },'GET',);
+
+        function createTable()
+        {
+            const tbl_data = document.getElementById('tbl_data');
+            if (tbl_data) {
+                new simpleDatatables.DataTable(tbl_data);
+            }
+        }
+    });
+</script>

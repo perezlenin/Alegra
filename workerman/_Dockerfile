@@ -1,0 +1,9 @@
+FROM php:7.4-apache
+WORKDIR /var/www/html/
+RUN docker-php-ext-install mysqli pdo pdo_mysql && docker-php-ext-enable pdo_mysql
+RUN docker-php-ext-install sockets pcntl posix
+RUN php -r "readfile('http://getcomposer.org/installer');" | php -- --install-dir=/usr/bin/ --filename=composer
+COPY . .
+EXPOSE 80
+RUN composer install
+CMD ["php","start.php","start","-d"]

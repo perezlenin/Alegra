@@ -1,0 +1,18 @@
+version: '3.3'
+    
+services:
+  mysql:
+    image: mysql:5.7.28
+    ports:
+      - 3307:3306
+    volumes:
+      - mysql_data:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: Swlagiu5159753.
+      MYSQL_DATABASE: testdocker
+      MYSQL_USER: lperez
+      MYSQL_PASSWORD: lperez
+networks:
+  net:
+volumes:
+  mysql_data:

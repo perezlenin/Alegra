@@ -1,0 +1,67 @@
+<div class="container-fluid px-4">
+    <h1 class="mt-4">Receta</h1>
+    <ol class="breadcrumb mb-4">
+        <li class="breadcrumb-item active">Lista</li>
+    </ol>
+    <div class="row">
+        <div class="card mb-4">
+            <div class="card-header">
+                <i class="fas fa-table me-1"></i>
+            </div>
+            <div class="card-body">
+                <table id="tbl_data">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Receta</th>
+                            <th>Ingredientes - Cantidad</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbl_body">
+                        <tr>
+                            <td>Tiger Nixon</td>
+                            <td>System Architect</td>
+                            <td>Edinburgh</td>
+                        </tr>
+                        <tr>
+                            <td>Garrett Winters</td>
+                            <td>Accountant</td>
+                            <td>Tokyo</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+    </div>
+</div>
+<script>
+    $(function(){
+        // createTable();
+        
+        ajax(URI_RECETA+"list", {}, function(response){
+            var html = "";
+            $.each(response,function(c,receta){
+                html += "<tr>";
+                html += "<td>"+receta.id+"</td>";
+                html += "<td>"+receta.receta+"</td>";
+                var td_ing = "";
+                $.each(receta.ingredientes,function(cc,ing){
+                    td_ing += ing.ingrediente+" : "+ing.cantidad_ingrediente+"<br>";
+                });
+                html += "<td>"+td_ing+"</td>";
+                html += "</tr>";
+            });            
+            $("#tbl_body").html(html);
+            createTable();
+        },'GET',);
+
+        function createTable()
+        {
+            const tbl_data = document.getElementById('tbl_data');
+            if (tbl_data) {
+                new simpleDatatables.DataTable(tbl_data);
+            }
+        }
+    });
+</script>
