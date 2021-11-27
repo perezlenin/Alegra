@@ -134,7 +134,7 @@
         <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
         <!-- <script src="js/datatables-simple-demo.js"></script> -->
         <script>
-            const URLBASE = "http://128.199.1.63/";
+            const URLBASE = "http://"+window.location.hostname+"/";
             const URI_RECETA = URLBASE+"recetas/v1/";
             const URI_INGREDIENTE = URLBASE+"ingredientes/v1/";
             const URI_HISTORIAL = URLBASE+"historial/v1/";
